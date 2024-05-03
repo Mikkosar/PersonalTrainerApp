@@ -11,6 +11,7 @@ import './App.css'
 import Customers from './components/Customers';
 import Trainings from './components/Trainings';
 import Calender from './components/Calender';
+import Charts from './components/Charts';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -62,6 +63,7 @@ function App() {
             <Tab label="Customers" {...a11yProps(0)} />
             <Tab label="Trainings" {...a11yProps(1)} />
             <Tab label="Calender" {...a11yProps(2)} />
+            <Tab label="Charts" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
@@ -72,6 +74,9 @@ function App() {
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
           <Calender />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={3}>
+          <Charts/>
         </CustomTabPanel>
       </Box>
     </>
